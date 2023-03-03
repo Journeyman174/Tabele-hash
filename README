@@ -31,7 +31,6 @@ din hash table pe baza numelui primit ca parametru al functiei si elibereaza
 memoria alocata celulei.
 	Operatia find este realizata prin utilizarea functie ExistaTH. Daca elementul
 nume exista, se afiseaza adevarat, altfel fals.
-	Functia print afiseaza toate IP-urile din tabela hash, conform indicatiilor
-din cerinta.
+	Functia print afiseaza toate IP-urile din tabela hash.
 	Functia print bucketa afiseaza bucket-ul corespunzator indicelui furnizat
 ca paramentru.

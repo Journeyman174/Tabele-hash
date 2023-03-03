@@ -1,6 +1,6 @@
 # Tabele-hash
 
-Programul creaza o tabela de dispersie-hashtable reprezentat ca un vector cu M
+	Programul creaza o tabela de dispersie-hashtable reprezentat ca un vector cu M
 elemente(bucket-uri). Fiecare bucket este reprezentat printr-o lista dublu inlantuita
 generica. Elementele din liste sunt de forma (Key,Value), respectiv numele paginii 
 web si adresa IP, structura TSite(nume, ip). Functia hashf calculeaza indexul ca

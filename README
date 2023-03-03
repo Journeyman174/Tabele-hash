@@ -1,0 +1,37 @@
+# Tabele-hash
+
+Programul creaza o tabela de dispersie-hashtable reprezentat ca un vector cu M
+elemente(bucket-uri). Fiecare bucket este reprezentat printr-o lista dublu inlantuita
+generica. Elementele din liste sunt de forma (Key,Value), respectiv numele paginii 
+web si adresa IP, structura TSite(nume, ip). Functia hashf calculeaza indexul ca
+fiind restul impartirii sumei caracterelor ce fac parte din cheile stocate in 
+liste (nume site), la M.
+	Dupa lansarea in executie a programului se prelucreaza argumentul 1-M(nr
+de bucket-uri din tabela hash), se deschide in citire in mod text fisierul de
+intrate hash.in si se deschide in scriere fisierul de iesire hash.out .
+Formatul fisierelor de intrare si de iesire este indicat in cerinta temei.
+	Programul principal consta intr-o bucla while care citeste linie cu linie
+fisierul de intrare analizand fiecare linie. Setul de operatii *cmd1, ... , *cmd6 
+este identificat prin parsarea liniei de intrare, caracterul <space> .
+La sfarsitul programului se elibereaza memoria alocata buffer-ului de citire din fisierul
+de intrare precum si tabelei de dispersie si listelor duble.
+	Pentru fiecare operatie s-a creat o functie de implementare, tabela hash
+la inceput fiind vida.
+	Functia put realizeaza operatia de adaugare a perechii (nume, ip) in lista 
+corespunzator indexului calculat de functia hashf. Mai intai, se verifica daca exista
+in tabela cu functia ExistaTH, elementul de adaugat. Daca acesta exista,
+nu va mai fi adaugat. Parametrii de apel a functiei put sunt : h, key, val, M, ordSite;
+ordSite este functia care insereaza elementul ordonat crescator dupa cheia nume, in
+lista.
+	Functia get implementeaza operatia get. Dupa calcularea indexului si identificarea
+bucket-ului intoarce NULL, daca numele site-ului nu exista, altfel afiseaza IP-ul 
+site-ului.
+	Functia elimin corespunzatoare operatiei remove sterge perechea (nume, ip) 
+din hash table pe baza numelui primit ca parametru al functiei si elibereaza
+memoria alocata celulei.
+	Operatia find este realizata prin utilizarea functie ExistaTH. Daca elementul
+nume exista, se afiseaza adevarat, altfel fals.
+	Functia print afiseaza toate IP-urile din tabela hash, conform indicatiilor
+din cerinta.
+	Functia print bucketa afiseaza bucket-ul corespunzator indicelui furnizat
+ca paramentru.
